@@ -183,7 +183,18 @@ def title_by_actor(matches: List[str]) -> List[str]:
     Returns:
         a list of movie titles that the actor acted in
     """
-    pass
+    result = []
+    actor_name = matches [0]
+
+    for movive in movie_db:
+        actors = get_actors(movie)
+
+        for actor in actors:
+            if actor_name in actor:
+                result.append(get_title(movie))
+                break
+        return result
+
 
 
 # dummy argument is ignored and doesn't matter
