@@ -76,6 +76,9 @@ def title_by_year_range(matches: List[str]) -> List[str]:
         in ["1991", "1994"] you will get movies made in 1991, 1992, 1993 & 1994)
     """
     pass
+    """Finds all movies made in the passed in year range"""
+    start_year = int(matches[0])
+    end_year = i
 
 
 def title_before_year(matches: List[str]) -> List[str]:
@@ -115,6 +118,15 @@ def director_by_title(matches: List[str]) -> List[str]:
     Returns:
         a list of 1 string, the director of the movie
     """
+    def director_by_title(matches: List[str]):
+        result = []
+        title = matches[0]
+
+        for movie in movie_db:
+            if get_title(movie) == title:
+                result.append(get_director(movie))
+
+        return result
     pass
 
 
@@ -139,7 +151,15 @@ def actors_by_title(matches: List[str]) -> List[str]:
     Returns:
         a list of actors who acted in the passed in title
     """
-    pass
+    def actors_by_title(matches: List[str]):
+        result = []
+        title = matches[0]
+
+        for movie in movie_db:
+            if get_title(movie) == title:
+                    result = get_actors(movie)
+                    break 
+        return result
 
 
 def year_by_title(matches: List[str]) -> List[int]:
