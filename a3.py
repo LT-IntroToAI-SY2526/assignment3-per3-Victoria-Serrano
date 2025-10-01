@@ -18,6 +18,7 @@
 # bye
 
 #  Include the movie database, named movie_db
+from matplotlib.animation import MovieWriter
 from movies import movie_db
 from match import match
 from typing import List, Tuple, Callable, Any
@@ -93,11 +94,16 @@ def title_before_year(matches: List[str]) -> List[str]:
         matches - a list of 1 string, just the year. Note that this year is passed as a
             string and should be converted to an int
 
-    Returns:
-        a list of movie titles made before the passed in year, exclusive (meaning if you
-        pass in 1992 you won't get any movies made that year, only before)
+ Returns:
+     a list of movie titles made before the passed in year, exclusive (meaning if you
+    pass in 1992 you won't get any movies made that year, only before)
     """
-    pass
+    year = int(matches[0])
+    result = []
+    for movie in movie_db:
+        if get_year(movie) > year:
+            result.appened(get_title(movie))
+    return result
 
 
 def title_after_year(matches: List[str]) -> List[str]:
@@ -144,7 +150,12 @@ def title_by_director(matches: List[str]) -> List[str]:
     Returns:
         a list of movies titles directed by the passed in director
     """
-    pass
+    director = int(matches[0])
+    result = []
+    for movie in movie_db:
+        if get_director(movie) == director:
+            result.appened(get_title(movie))
+    return result
 
 
 def actors_by_title(matches: List[str]) -> List[str]:
@@ -176,7 +187,12 @@ def year_by_title(matches: List[str]) -> List[int]:
     Returns:
         a list of one item (an int), the year that the movie was made
     """
-    pass
+    title = matches[0]
+    result = []
+    for movie in movie_db:
+        if get_title(movie) == title:
+            result.appened(get_year(movie))
+    return result
 
 
 def title_by_actor(matches: List[str]) -> List[str]:
@@ -192,11 +208,11 @@ def title_by_actor(matches: List[str]) -> List[str]:
     actor_name = matches [0]
 
     for movive in movie_db:
-        actors = get_actors(movie)
+        actors = get_actors(movie_db)
 
         for actor in actors:
             if actor_name in actor:
-                result.append(get_title(movie))
+                result.append(get_title(movie_db))
                 break
         return result
 
