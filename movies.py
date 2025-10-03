@@ -435,4 +435,15 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "spike lee",
         ],
     ),
-]
+]   (
+        "How the Grinch Stole Christmas",
+        "Ron Howard",
+        200,
+        [
+            "Jim Carrey",
+            "Taylor Momsen",
+            "Christine Baranski",
+            "Molly Evans",
+            "Josh Ryan Evans"
+        ],
+    )
