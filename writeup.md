@@ -15,7 +15,7 @@ This assignment completes our movie chatbot system by implementing action functi
 ## Reflection Questions
 
 1. What are some key programming concepts or techniques that you learned while completing this assignment?
-While completing this assignment, I learned how to 
+While completing this assignment, I learned how to find the different results when the codes are defining different topics. I learned how to change the functions to give back the result that the function is trying to find. I also learned that most of the funtions are going to be made in the same order using the same type of code, but the outcomes are going to be different.
 
 
 2. How does the overall movie chatbot system work? Explain the flow from when a user types a query to when they receive an answer.
