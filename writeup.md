@@ -19,7 +19,8 @@ While completing this assignment, I learned how to find the different results wh
 
 
 2. How does the overall movie chatbot system work? Explain the flow from when a user types a query to when they receive an answer.
-
+The movie chatbot system works by using a function that gives the result of the defined term that is given to us. We can use the defined term to find the result by plugging in the movie data, for example, the movie title, director, or actors in the movie. When the function is asking a question it would have a define variable for the code and when the code is written out, it will conclude in a result where the answer is given.
 
 
 3. What are some real-world applications where this type of pattern-matching chatbot system could be useful? How might you extend or improve this system for practical use?
+Some real-world applications where this type of pattern-matching chatbot system could be useful is when you are making a deivery/ordering food, purchasing an item onlie, or making an appointment for a doctor or to go somewhere. This system can be improved for practical use by making it easier to use the function that needs to be created to do a certain task. For example instead of having to rewrite the definitions for each task multiple times, the system can be improved if there was a way to change the topic of each functionn just once instead of repeating codes.
